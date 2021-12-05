@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'current_weather.dart';
+import 'forcast_weather.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -10,12 +13,26 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Weather App"),
-        
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text("Weather App",style: TextStyle(fontWeight: FontWeight.bold ),),
+          bottom: TabBar(
+              tabs: [
+              Text("Current Weather"),
+              Text("Forcast Weather"),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            CurrentWeather(),
+            ForcastWeather(),
+          ],
+        ),
       ),
     );
   }
 }
-
