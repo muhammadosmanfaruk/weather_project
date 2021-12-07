@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:weather_project/home_page.dart';
 import 'package:weather_project/model/weather_response.dart';
+import 'package:weather_project/ui_design.dart';
 import 'package:weather_project/weather_provider.dart';
 
 void main(){
@@ -23,9 +24,7 @@ class MyApp extends StatelessWidget {
       title: 'weather app',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.orange),
-      home: HomePage(
-
-      ),
+      home: UIDesign(),
     );
   }
 }
