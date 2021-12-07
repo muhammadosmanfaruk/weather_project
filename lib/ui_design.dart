@@ -77,26 +77,31 @@ class UIDesign extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 320,
+                          height: 270,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(left: 15.0),
-                              child: Text("24\u2103",
+                              child: Text("22°C",
                                   style: TextStyle(
-                                    fontSize: 25,
+                                    fontSize: 75,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                   )),
                             ),
-                            SizedBox(
-                              height: 5,
-                            ),
                             Padding(
                               padding: const EdgeInsets.only(left: 15.0),
-                              child: ,
+                              child: Row(
+                                children: [
+                                  Icon(Icons.access_time, color: Colors.white, size: 20,),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text("Day", style: TextStyle(fontSize: 20, color: Colors.white),),
+                                ],
+                              ),
                             ),
                           ],
                         ),
